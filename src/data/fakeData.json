@@ -1,0 +1,74 @@
+[
+    {
+        "id": "1",
+        "question": "Question 1",
+        "responses": [
+            {
+                "id": "1",
+                "label": "Response 1",
+                "selected": false,
+                "score": 1
+            },
+            {
+                "id": "2",
+                "label": "Response 2",
+                "selected": false,
+                "score": 2
+            },
+            {
+                "id": "3",
+                "label": "Response 3",
+                "selected": false,
+                "score": 3
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "question": "Question 2",
+        "responses": [
+            {
+                "id": "1",
+                "label": "Response 1",
+                "selected": false,
+                "score": 1
+            },
+            {
+                "id": "2",
+                "label": "Response 2",
+                "selected": false,
+                "score": 2
+            },
+            {
+                "id": "3",
+                "label": "Response 3",
+                "selected": false,
+                "score": 3
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "question": "Question 3",
+        "responses": [
+            {
+                "id": "1",
+                "label": "Response 1",
+                "selected": false,
+                "score": 1
+            },
+            {
+                "id": "2",
+                "label": "Response 2",
+                "selected": false,
+                "score": 2
+            },
+            {
+                "id": "3",
+                "label": "Response 3",
+                "selected": false,
+                "score": 3
+            }
+        ]
+    }
+]
