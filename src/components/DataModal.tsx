@@ -58,6 +58,11 @@ const DataModal = ({
         setData((prev: any) => ({ ...prev, responses: [...prev.responses, initElem()] }))
     }
 
+    const invalidData = () => {
+        return data.question == "" ||
+            data.responses.some((elem: any) => elem.label == "" || elem.score <= 0)
+    }
+
     return (
 
         <Transition.Root show={isOpen} as={Fragment}>
@@ -113,7 +118,8 @@ const DataModal = ({
                             </div>
 
                             <div className="mt-4 flex gap-4 justify-end">
-                                <button className='flex items-center text-sm md:text-base bg-primary text-white rounded-md py-2 px-4' onClick={() => save(data)}>
+                                <button className='flex items-center text-sm md:text-base bg-primary text-white rounded-md py-2 px-4 disabled:bg-light disabled:cursor-not-allowed' 
+                                    onClick={() => save(data)} disabled={invalidData()}>
                                     Save
                                 </button>
                                 <button className='flex items-center text-sm md:text-base border-2 border-primary  rounded-md py-2 px-4' onClick={close}>
