@@ -1,3 +1,3 @@
 # Personnality test application (React / Typescript)
 
-Demo : (https://test-personality.netlify.app/).
+Demo : [Personnality test](https://test-personality.netlify.app/).
