@@ -6,7 +6,7 @@ import emoji from '../assets/emoji.png'
 const TestResult = () => {
     const { state }: any = useLocation()
     return (
-        <div className='flex flex-col gap-12 justify-center items-center h-screen px-12 md:px-24'>
+        <div className='flex flex-col gap-12 justify-center items-center h-screen px-12 md:px-24 pt-24'>
         <div className='flex items-center justify-around w-full px-24'>
             <Link to="/" className='flex items-center text-sm md:text-base border-2 border-primary  rounded-md py-2 px-4'>
                 <FaHome className='mx-1' />

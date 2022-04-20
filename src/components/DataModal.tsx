@@ -7,7 +7,7 @@ const initElem = () => {
         id: new Date().getTime().toString(),
         label: "",
         selected: false,
-        score: 0
+        score: ""
     }
 }
 
@@ -39,7 +39,7 @@ const DataModal = ({
                 if (elem.id == id) {
                     return {
                         ...elem,
-                        [e.target.name]: e.target.value
+                        [e.target.name]: e.target.name == "score" ? +e.target.value : e.target.value
                     }
                 }
                 return elem
@@ -105,9 +105,9 @@ const DataModal = ({
                                 {
                                     data && data.responses && data.responses.map(
                                         (resp: any) => <div key={resp.id} className='flex justify-between items-center p-4'>
-                                        <input type="text" name="label" className='py-1 px-2 border border-gray-300 w-full mr-4 rounded-md focus:border-primary focus:outline-none'
-                                            value={resp.label} onChange={(e: any) => onChangeResp(e, resp.id)} />
-                                            <input type="number" name="score" className='py-1 px-2 border border-gray-300 w-1/3 mr-4 rounded-md focus:border-primary focus:outline-none'
+                                            <input type="text" name="label" placeholder='Response' className='py-1 px-2 border border-gray-300 w-full mr-4 rounded-md focus:border-primary focus:outline-none'
+                                                value={resp.label} onChange={(e: any) => onChangeResp(e, resp.id)} />
+                                            <input type="number" name="score" placeholder='Score' className='py-1 px-2 border border-gray-300 w-1/3 mr-4 rounded-md focus:border-primary focus:outline-none'
                                                 value={resp.score} onChange={(e: any) => onChangeResp(e, resp.id)} />
                                             <button onClick={() => onRemoveResp(resp.id)} className='rounded-full p-2 bg-red-600'>
                                                 <FaTrash className='text-white' />
@@ -118,7 +118,7 @@ const DataModal = ({
                             </div>
 
                             <div className="mt-4 flex gap-4 justify-end">
-                                <button className='flex items-center text-sm md:text-base bg-primary text-white rounded-md py-2 px-4 disabled:bg-light disabled:cursor-not-allowed' 
+                                <button className='flex items-center text-sm md:text-base bg-primary text-white rounded-md py-2 px-4 disabled:bg-light disabled:cursor-not-allowed'
                                     onClick={() => save(data)} disabled={invalidData()}>
                                     Save
                                 </button>
