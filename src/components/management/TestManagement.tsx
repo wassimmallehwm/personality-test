@@ -55,8 +55,8 @@ const TestManagement = () => {
     }
 
     return (
-        <div className='flex justify-start items-center h-screen px-12 md:px-24'>
-            <div className='flex flex-col gap-6 w-full h-[60vh] overflow-auto'>
+        <div className='flex justify-start items-center h-screen px-12 md:px-24 pt-24'>
+            <div className='flex flex-col gap-6 w-full'>
                 <div className='flex items-center justify-between'>
                     <Link to="/" className='flex items-center text-sm md:text-base border-2 border-primary  rounded-md py-2 px-4'>
                         <FaHome className='mx-1' />
@@ -68,11 +68,13 @@ const TestManagement = () => {
                     </button>
                 </div>
                 <hr className='my-2 bg-primary h-[2px]' />
+                <div className='flex flex-col gap-6 w-full h-[60vh] overflow-auto'>
                 {
                     dataList && dataList.map(
                         (item: any) => <QuestionItem key={item.id} item={item} editElem={openEditModal} removeElem={removeElem} />
                     )
                 }
+                </div>
 
             </div>
             {isOpen && <DataModal isOpen={isOpen} close={closeEditModal} question={editElem} save={onEditElem} />}

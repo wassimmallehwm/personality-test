@@ -11,6 +11,29 @@
   width: 100%;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 110px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7E4FD6;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7E4FD6;
+}
+
 @responsive {
   .landingPageContainerMd {
     padding-left: 2rem;

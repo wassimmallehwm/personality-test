@@ -59,7 +59,7 @@ const DataModal = ({
     }
 
     const invalidData = () => {
-        return data.question == "" ||
+        return data.question == "" || data.responses.length < 2 ||
             data.responses.some((elem: any) => elem.label == "" || elem.score <= 0)
     }
 

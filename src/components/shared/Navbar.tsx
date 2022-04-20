@@ -7,7 +7,7 @@ const Navbar = () => {
 
     return (
         <nav className="flex flex-wrap items-center justify-between px-2 z-10 
-            transition-colors duration-500 ease top-0 fixed w-full">
+            transition-colors duration-500 ease top-0 fixed w-full h-24">
             <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                 <div className="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
                     <Link
